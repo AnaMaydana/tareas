@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portada - Programación 3 | UPDS</title>
-
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -17,6 +16,8 @@
             color: white;
             padding: 40px 20px;
             text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
         }
 
         header h1 {
@@ -46,14 +47,45 @@
             margin-top: 25px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
         }
 
         h2 {
             color: #003366;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
         }
 
         ul {
             line-height: 1.8em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .task-card {
+            background: #0055aa;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1 1 calc(30% - 10px);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .task-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         footer {
@@ -77,78 +109,74 @@
         .btn:hover {
             background: #003f7f;
         }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Portada - Programación 3</h1>
-        <p>Universidad Privada Domingo Savio (UPDS)</p>
-    </header>
+<header>
+    <h1>Programación 3</h1>
+    <p>Universidad Privada Domingo Savio (UPDS)</p>
+</header>
 
-    <nav>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#intro">Introducción</a>
-        <a href="#tareas">Mis Tareas</a>
-    </nav>
+<nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#intro">Introducción</a>
+    <a href="#tareas">Mis Tareas</a>
+</nav>
 
-    <div class="container" id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>
-            Hola, mi nombre es <strong>Ana Maribel Maydana Espejo</strong>.  
-            Soy estudiante de la materia <strong>Programación 3</strong> en la UPDS y este sitio 
-            servirá como un índice donde organizaré mis tareas, prácticas y ejercicios de C++ 
-            desarrollados durante el semestre.
-        </p>
-    </div>
+<div class="container" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+        Hola, mi nombre es <strong>Ana Maribel Maydana Espejo</strong>.
+        Soy estudiante de la materia <strong>Programación 3</strong> en la UPDS y este sitio
+        servirá como un índice donde organizaré mis tareas, prácticas y ejercicios de C++
+        desarrollados durante el semestre.
+    </p>
+</div>
 
-    <div class="container" id="intro">
-        <h2>Introducción a la Programación</h2>
-        <p>
-            La programación es el proceso de crear instrucciones que una computadora puede seguir 
-            para realizar tareas específicas. En el lenguaje C++, que estudiamos en Programación 3, 
-            se aprende a desarrollar algoritmos eficientes, manejar estructuras de datos, aplicar 
-            conceptos de programación orientada a objetos y construir soluciones a problemas reales.
-        </p>
-        <p>
-            Este blog servirá como repositorio personal para almacenar mis avances, prácticas y 
-            ejercicios desarrollados en la materia.
-        </p>
-    </div>
+<div class="container" id="intro">
+    <h2>Introducción a la Programación</h2>
+    <p>
+        La programación es el proceso de crear instrucciones que una computadora puede seguir
+        para realizar tareas específicas. En el lenguaje C++, que estudiamos en Programación 3,
+        se aprende a desarrollar algoritmos eficientes, manejar estructuras de datos, aplicar
+        conceptos de programación orientada a objetos y construir soluciones a problemas reales.
+    </p>
+    <p>
+        Este blog servirá como repositorio personal para almacenar mis avances, prácticas y
+        ejercicios desarrollados en la materia.
+    </p>
+</div>
 
-    <div class="container" id="tareas">
-        <h2>Índice de Tareas (Programación 3)</h2>
-        <p>A continuación se listan las tareas. Cada una tendrá su enlace más adelante:</p>
+<div class="container" id="tareas">
+    <h2>Índice de Tareas (Programación 3)</h2>
+    <p>A continuación se listan las tareas. Cada una tendrá su enlace más adelante:</p>
 
-        <ul>
-            <li><a href="#">Tarea 1 – Introducción a C++</a></li>
-            <li><a href="#">Tarea 2 – Variables y Tipos de Datos</a></li>
-            <li><a href="#">Tarea 3 – Condicionales</a></li>
-            <li><a href="#">Tarea 4 – Bucles</a></li>
-            <li><a href="#">Tarea 5 – Funciones</a></li>
-            <li><a href="#">Tarea 6 – Arreglos</a></li>
-            <li><a href="#">Tarea 7 – Matrices</a></li>
-            <li><a href="#">Tarea 8 – Punteros</a></li>
-            <li><a href="#">Tarea 9 – Structs</a></li>
-            <li><a href="#">Tarea 10 – Programación Orientada a Objetos</a></li>
-            <li><a href="#">Tarea 11 – Clases y Objetos</a></li>
-            <li><a href="#">Tarea 12 – Herencia</a></li>
-            <li><a href="#">Tarea 13 – Polimorfismo</a></li>
-            <li><a href="#">Tarea 14 – Encapsulamiento</a></li>
-            <li><a href="#">Tarea 15 – Archivos en C++</a></li>
-            <li><a href="#">Tarea 16 – Excepciones</a></li>
-            <li><a href="#">Tarea 17 – Templates</a></li>
-            <li><a href="#">Tarea 18 – Proyecto Parcial</a></li>
-            <li><a href="#">Tarea 19 – Proyecto Final</a></li>
-        </ul>
+    <ul>
+        <li class="task-card"><a href="https://github.com/AnaMaydana/programacion3/blob/main/puntero.cpp" target="_blank">Tarea 1 – Punteros</a></li>
+        <li class="task-card"><a href="https://github.com/AnaMaydana/programacion3/blob/main/administracionmemoria.cpp" target="_blank">Tarea 2 – Administración de memoria</a></li>
+        <li class="task-card"><a href="https://github.com/AnaMaydana/programacion3/blob/main/listaenlace.cpp" target="_blank">Tarea 3 – Lista Enlace</a></li>
+        <li class="task-card"><a href="https://github.com/AnaMaydana/programacion3/blob/main/sobrecargasuma.cpp" target="_blank">Tarea 4 – Sobrecarga de Suma</a></li>
+        <li class="task-card"><a href="https://github.com/AnaMaydana/programacion3/blob/main/mostrar().cpp" target="_blank">Tarea 5 – Mostrar()</a></li>
+        <li class="task-card"><a href="https://github.com/AnaMaydana/programacion3/blob/main/dibujar.cpp" target="_blank">Tarea 6 – Dibujar</a></li>
+        <li class="task-card"><a href="https://github.com/AnaMaydana/programacion3/blob/main/mostrar(2).cpp" target="_blank">Tarea 7 – Mostrar(2)</a></li>
+    </ul>
 
-        <a href="#" class="btn">Ir al Blog de Programación 3</a>
-    </div>
+    <a href="#" class="btn">Ir al Blog de Programación 3</a>
+</div>
 
-    <footer>
-        © 2025 - Mi Blog de Programación 3 - UPDS
-    </footer>
+<footer>
+    © 2025 - Mi Blog de Programación 3 - UPDS
+</footer>
 
 </body>
 </html>
